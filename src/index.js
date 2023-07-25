@@ -13,6 +13,12 @@ const handleSubmitForm = evt => {
   page = 1;
   loadMoreRef.style.display = 'none';
   searchQuery = evt.target.elements.searchQuery.value;
+
+  // перевіряємо чи користувач ввів якийсь запит
+  if (!searchQuery) {
+    return;
+  }
+
   processApiAnswer(page, searchQuery, galleryRef, loadMoreRef);
 };
 
