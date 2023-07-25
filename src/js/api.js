@@ -14,18 +14,27 @@ const PER_PAGE = 40;
 
 // Робимо запит і отримуємо відповідь від pixabay
 const fetchImage = async (searchQuery, page) => {
-  const response = await axios.get(URL, {
-    params: {
-      key: API_KEY,
-      q: searchQuery,
-      imageType: 'photo',
-      orientation: 'horizontal',
-      safesearch: true,
-      page,
-      per_page: PER_PAGE,
-    },
-  });
-  return response;
+  try {
+    const response = await axios.get(URL, {
+      params: {
+        key: API_KEY,
+        q: searchQuery,
+        imageType: 'photo',
+        orientation: 'horizontal',
+        safesearch: true,
+        page,
+        per_page: PER_PAGE,
+      },
+    });
+    console.log(response.status);
+    if (response.status === 404) {
+      throw new Error('Page not found error 404');
+    }
+
+    return response;
+  } catch {
+    throw new Error('Error while fetching data from the API');
+  }
 };
 
 // обробляємо відповідь від pixabay
