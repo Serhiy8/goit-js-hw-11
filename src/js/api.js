@@ -6,6 +6,7 @@ import {
   handleNoImages,
   handleEndOfImages,
   initLightBox,
+  handleError,
 } from './utilities';
 
 const URL = 'https://pixabay.com/api/';
