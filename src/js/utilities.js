@@ -31,6 +31,10 @@ const handleEndOfImages = loadMoreRef => {
 const handleError = () =>
   Notiflix.Notify.failure('An error occurred while executing the request!');
 
+// виводимо повідомлення якщо знайшли картинок менше ніж на ст орінку
+const handleLessThanOnePage = () =>
+  Notiflix.Notify.failure('These are all the pictures we found');
+
 // ініціалізуємо lightBox
 const initLightBox = () => {
   const lightbox = new SimpleLightbox('.photo-card a', {
@@ -45,6 +49,7 @@ export {
   handleQuantityOfImages,
   handleNoImages,
   handleEndOfImages,
+  handleLessThanOnePage,
   handleError,
   initLightBox,
 };
