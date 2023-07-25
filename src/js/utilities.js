@@ -9,7 +9,7 @@ const renderGallery = (galleryRef, arrayImages) =>
 
 // виводимо к-ть знайдених картинок
 const handleQuantityOfImages = totalImages =>
-  Notiflix.Notify.success(`We have found ${totalImages} images`);
+  Notiflix.Notify.success(`"Hooray! We found ${totalImages} images."`);
 
 // Якщо наш запит не знайшов даних що задовільняють.
 const handleNoImages = loadMoreRef => {
