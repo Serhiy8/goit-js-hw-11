@@ -27,7 +27,6 @@ const fetchImage = async (searchQuery, page) => {
         per_page: PER_PAGE,
       },
     });
-    console.log(response.status);
     if (response.status === 404) {
       throw new Error('Page not found error 404');
     }
