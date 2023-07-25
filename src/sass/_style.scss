@@ -1,0 +1,105 @@
+body{
+    margin: 0 auto;
+
+}
+
+.photo-card img{
+    display: block;
+    width: 335px;
+    max-height: 200px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/41294/hero.jpg) no-repeat center center fixed; 
+    background-size: cover;
+  }
+
+.search-form {
+    width: 500px;
+    height: 40px;
+    background: #444;
+    background: rgba(0,0,0,.2);
+    border-radius:  3px;
+    border: 1px solid #fff;
+    
+    input {
+      width: 370px;
+      padding: 10px 5px;
+      float: left;
+      color: #ccc;
+      border: 0;
+      background: transparent;
+      border-radius: 3px 0 0 3px;
+      &:focus {
+        outline: 0;
+        background:transparent;
+      }
+    }
+    
+    button {
+      position: relative;
+      float: right;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      height: 100%;
+      width: 120px;
+      color: #fff;
+      background: transparent;
+      border-left: 1px solid #fff;
+      border-radius: 0 3px 3px 0;
+      &:hover {
+        background: #fff;
+        color:#444;
+      }
+      &:active {
+        box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
+      }
+      &:focus {
+        outline: 0;
+      }
+    }  
+  }
+
+  .gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    align-items: end;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .photo-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    margin: 0 auto;
+    height: 100%;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .load-more{
+    display: none;
+    margin: 0 auto;
+    background-color: blue;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 4px;
+    border: transparent;
+    font-size: 20px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
