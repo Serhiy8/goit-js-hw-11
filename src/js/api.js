@@ -33,7 +33,7 @@ const fetchImage = async (searchQuery, page) => {
 
     return response;
   } catch {
-    throw new Error('Error while fetching data from the API');
+    throw new Error('an error occurred while fetching the images from the API');
   }
 };
 
