@@ -24,5 +24,5 @@ const handleLoadMoreImages = () => {
 // Додаємо обробник події на форму
 formRef.addEventListener('submit', handleSubmitForm);
 
-// Додаємо обробник події на кнопку load more
+// Додаємо обробник події на btn load more
 loadMoreRef.addEventListener('click', handleLoadMoreImages);
