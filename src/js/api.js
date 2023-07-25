@@ -12,7 +12,7 @@ const URL = 'https://pixabay.com/api/';
 const API_KEY = '25385009-fbf12157e432b3e643b87146c';
 const PER_PAGE = 40;
 
-// Робимо запит на pixabay
+// Робимо запит і отримуємо відповідь від pixabay
 const fetchImage = async (searchQuery, page) => {
   const response = await axios.get(URL, {
     params: {

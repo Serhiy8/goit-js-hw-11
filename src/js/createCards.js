@@ -1,4 +1,4 @@
-export const renderRequest = arrayImages => {
+export const createCards = arrayImages => {
   const markup = arrayImages
     .map(
       image =>

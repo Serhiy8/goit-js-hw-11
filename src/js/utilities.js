@@ -1,11 +1,11 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
-import { renderRequest } from './renderCard';
+import { createCards } from './createCards';
 
 // рендеримо розмітку
 const renderGallery = (galleryRef, arrayImages) =>
-  galleryRef.insertAdjacentHTML('beforeend', renderRequest(arrayImages));
+  galleryRef.insertAdjacentHTML('beforeend', createCards(arrayImages));
 
 // виводимо к-ть знайдених картинок
 const handleQuantityOfImages = totalImages =>
